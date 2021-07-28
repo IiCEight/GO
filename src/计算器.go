@@ -98,7 +98,6 @@ func main() {
 				}
 				op.top--
 			}
-			// fmt.Printf("loop==%d op.top==%d num.top== %d\n", i, op.top, num.top)
 		}
 
 		for op.top > 0 { // 处理符号栈中残留的符号
