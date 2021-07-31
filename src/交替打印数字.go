@@ -6,7 +6,7 @@ import (
 )
 
 func odd() {
-	for i := 0; ; i += 10 {
+	for i := 0; i <= 100; i += 10 {
 		fmt.Println(i + 1)
 		fmt.Println(i + 3)
 		fmt.Println(i + 5)
@@ -17,7 +17,7 @@ func odd() {
 }
 
 func even() {
-	for i := 2; ; i += 10 {
+	for i := 2; i <= 100; i += 10 {
 		fmt.Println(i + 0)
 		fmt.Println(i + 2)
 		fmt.Println(i + 4)
