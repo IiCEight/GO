@@ -1,0 +1,17 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "welcome!",
+        "title": "Saber",
+        "termsOfService": "http://arturia.top",
+        "contact": {
+            "name": "iSaber",
+            "url": "http://arturia.top",
+            "email": "1346959878@qq.com"
+        },
+        "version": "1.0"
+    },
+    "host": "localhost",
+    "basePath": "D:\\Project\\Visual Studio Code\\Go",
+    "paths": {}
+}

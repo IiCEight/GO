@@ -1,0 +1,13 @@
+basePath: D:\Project\Visual Studio Code\Go
+host: localhost
+info:
+  contact:
+    email: 1346959878@qq.com
+    name: iSaber
+    url: http://arturia.top
+  description: welcome!
+  termsOfService: http://arturia.top
+  title: Saber
+  version: "1.0"
+paths: {}
+swagger: "2.0"
