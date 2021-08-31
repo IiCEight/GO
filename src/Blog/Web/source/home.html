@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iSaber blog</title>
+    <link rel="stylesheet" href="/src/common.css">
+    <link rel="stylesheet" href="/src/home.css">
+</head>
+<body>
+    <header class = "header">
+        <nav class = "nav">
+            <div class ="logo">
+                <a href="#" ></a>
+            </div>
+
+            <div class="user">
+                <a href="login" class="login">登录</a>
+                <a href="signup" class="signup">注册</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="addbg">
+        <div class="add">
+            <div class="more">
+                <a href="addartcle">添加文章</a>
+            </div>
+        </div>
+    </div>
+    {{range .artcles}}
+        <div class="artcle_bg">
+            <div class="artcle">
+                <div class="title">
+                    <a href="#">{{.Title}}</a>
+                </div>
+                <div class="sum">
+                    {{.Content}}
+                </div>
+                    <a href="/modifyartcle?id={{.Id}}" class="modify">修改</a>
+
+                    <a href="/delete?id={{.Id}}" class = "delete">删除</a>
+                </div>
+            </div>
+        </div>
+    {{end}}
+
+</body>
+</html>

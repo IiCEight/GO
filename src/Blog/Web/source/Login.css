@@ -1,0 +1,53 @@
+.body {
+    margin: auto;
+    width: 1300px;
+    height: 600px;
+    background-color: pink;
+}
+
+.login{
+    margin: auto;
+    width: 500px;
+    height: 600px;
+    background-color: skyblue;
+}
+
+.login input {
+    width: 400px;
+    height: 40px;
+    outline: none;
+    border-style: none;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+.login_title {
+    font-size:36px;;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.login_name {
+    margin-top: 32px;
+}
+
+.login_input {
+    margin: auto;
+    width: 400px;
+    height: 40px;
+}
+
+.login_pwd {
+    margin: 32px auto;
+}
+
+.submit {
+    margin: auto;
+    width: 400px;
+    height: 40px;
+}
+
+.submit_input {
+    background-color: rgb(218, 218, 218);
+}
+

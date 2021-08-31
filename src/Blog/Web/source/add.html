@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iSaber blog</title>
+    <link rel="stylesheet" href="/src/common.css">
+    <link rel="stylesheet" href="/src/add.css">
+</head>
+<body>
+    <header class = "header">
+        <nav class = "nav">
+            <div class ="logo">
+                <a href="#" ></a>
+            </div>
+
+            <div class="user">
+                <a href="login" class="login">登录</a>
+                <a href="signup" class="signup">注册</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="body">
+        <div class = "add">
+            <div class = "add_title">Add</div>
+
+            <form action="addartcle" enctype="application/x-www-form-urlencoded" method="POST">
+                <div class="add_artname">
+                    <div class = "add_input">
+                        <input type="text" name="title" placeholder="请输入文章标题">
+                    </div>
+                </div>
+                
+                <div class="add_content">
+                    <textarea name="content" placeholder="输入文章内容"></textarea>
+                </div>
+
+                <div class = "submit">
+                    <input type="submit" class="submit_input">
+                </div>
+            </form>
+            
+        </div>
+    </div>
+
+</body>
+</html>

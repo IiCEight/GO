@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="stylesheet" href="/src/common.css">
+    <link rel="stylesheet" href="/src/signup.css">
+</head>
+<body>
+    <header class = "header">
+        <nav class = "nav">
+            <div class ="logo">
+                <a href="/" ></a>
+            </div>
+
+            <div class="user">
+                <a href="login" class="login">登录</a>
+                <a href="signup" class="signup">注册</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="body">
+        <div class = "signup">
+            <div class = "sign_up_title">Sign up</div>
+
+            <form action="signup" enctype="application/x-www-form-urlencoded" method="POST">
+                <div class="signup_name">
+                    <div class = "signup_input">
+                        <input type="text" name="username" placeholder="请输入用户名">
+                    </div>
+                </div>
+                
+                <div class="signup_pwd">
+                    <div class = "signup_input">
+                        <input type="password" name="password" placeholder = "请输入密码">
+                    </div>
+                </div>
+
+                <div class = "submit">
+                    <input type="submit" class="submit_input">
+                </div>
+            </form>
+
+            <h3 style="color: red;">{{.err}}</h3>
+        </div>
+    </div>
+
+</body>
+</html>

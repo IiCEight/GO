@@ -1,0 +1,107 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+
+.header {
+    height: 75px;
+    background-color: pink;
+}
+
+.nav {
+    /* position: absolute; */
+    width: 1300px;
+    height: 75px;
+    margin: auto;
+}
+
+.logo {
+    /* position: relative; */
+    float: left;
+    width: 200px;
+    height: 75px;
+    background-color: skyblue;
+}
+
+.logo a {
+    display: block;
+    width: 200px;
+    height: 75px;
+    background-image: url(/pic/logo.png);
+    background-size: 100%;
+}
+
+.user {
+    position: relative;
+    float: right;
+    width: 200px;
+    height: 75px;
+}
+
+.user .login {
+    position: absolute;
+    right: 0%;
+    width: 90px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    margin-top: 15px;
+    background-color: skyblue;
+    font-size: 20px;
+    font-weight: 550;
+    color: black;
+    /* border-radius: 100%; */
+}
+
+.user .signup {
+    position: absolute;
+    left: 0%;
+    width: 90px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    margin-top: 15px;
+    background-color: skyblue;
+    font-size: 20px;
+    font-weight: 550;
+    color: black;
+}
+
+.artcle_bg {
+    height: 400px;
+    width: 100%;
+    background-color: #dddddd;
+}
+
+.artcle {
+    position: relative;
+    height: 400px;
+    width: 1000px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: skyblue;
+}
+
+.title {
+    height: 60px;
+    width: 100%;
+    padding-top: 40px;
+    font-size: 36px;
+    text-align: center;
+    background-color: snow;
+}
+
+.sum {
+    width: 940px;
+    height: 200px;
+    padding: 30px;
+    background-color: aliceblue;
+}
+
+.msg {
+    width: 940px;
+    height: 30px;
+    padding: 5px 30px;
+}
