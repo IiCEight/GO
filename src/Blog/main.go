@@ -216,6 +216,7 @@ func main() {
 	r.NoRoute(func(c *gin.Context) {
 		c.HTML(http.StatusNotFound, "wrong.html", nil)
 	})
+
 	r.GET("/", index)
 	r.GET("/login", loginpage)
 	r.POST("/login", login)
