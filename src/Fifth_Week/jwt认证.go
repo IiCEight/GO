@@ -27,7 +27,7 @@ func GetToken() string {
 
 	t := jwt.NewWithClaims(jwt.SigningMethodHS256, c)
 	s, _ := t.SignedString(key)
-
+	
 	return s
 }
 

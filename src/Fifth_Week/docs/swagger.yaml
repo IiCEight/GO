@@ -1,13 +1,24 @@
-basePath: D:\Project\Visual Studio Code\Go
-host: localhost
+host: localhost:8080
 info:
-  contact:
-    email: 1346959878@qq.com
-    name: iSaber
-    url: http://arturia.top
-  description: welcome!
-  termsOfService: http://arturia.top
-  title: Saber
-  version: "1.0"
-paths: {}
+  contact: {}
+  description: rtp 的云端系统
+  title: rtp cloud
+paths:
+  /index:
+    get:
+      description: none
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: hsdf
+          schema:
+            type: string
+        "500":
+          description: "no"
+          schema:
+            type: string
+      summary: index
+      tags:
+      - index
 swagger: "2.0"

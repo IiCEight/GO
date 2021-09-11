@@ -1,17 +1,37 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "welcome!",
-        "title": "Saber",
-        "termsOfService": "http://arturia.top",
-        "contact": {
-            "name": "iSaber",
-            "url": "http://arturia.top",
-            "email": "1346959878@qq.com"
-        },
-        "version": "1.0"
+        "description": "rtp 的云端系统",
+        "title": "rtp cloud",
+        "contact": {}
     },
-    "host": "localhost",
-    "basePath": "D:\\Project\\Visual Studio Code\\Go",
-    "paths": {}
+    "host": "localhost:8080",
+    "paths": {
+        "/index": {
+            "get": {
+                "description": "none",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "index"
+                ],
+                "summary": "index",
+                "responses": {
+                    "200": {
+                        "description": "hsdf",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "500": {
+                        "description": "no",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

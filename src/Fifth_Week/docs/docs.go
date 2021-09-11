@@ -17,17 +17,39 @@ var doc = `{
     "info": {
         "description": "{{escape .Description}}",
         "title": "{{.Title}}",
-        "termsOfService": "http://arturia.top",
-        "contact": {
-            "name": "iSaber",
-            "url": "http://arturia.top",
-            "email": "1346959878@qq.com"
-        },
+        "contact": {},
         "version": "{{.Version}}"
     },
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
-    "paths": {}
+    "paths": {
+        "/index": {
+            "get": {
+                "description": "none",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "index"
+                ],
+                "summary": "index",
+                "responses": {
+                    "200": {
+                        "description": "hsdf",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "500": {
+                        "description": "no",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
 }`
 
 type swaggerInfo struct {
@@ -41,12 +63,12 @@ type swaggerInfo struct {
 
 // SwaggerInfo holds exported Swagger Info so clients can modify it
 var SwaggerInfo = swaggerInfo{
-	Version:     "1.0",
-	Host:        "localhost",
-	BasePath:    "D:\\Project\\Visual Studio Code\\Go",
+	Version:     "",
+	Host:        "localhost:8080",
+	BasePath:    "",
 	Schemes:     []string{},
-	Title:       "Saber",
-	Description: "welcome!",
+	Title:       "rtp cloud",
+	Description: "rtp 的云端系统",
 }
 
 type s struct{}

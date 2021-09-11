@@ -1,51 +1,35 @@
-package common
+package main
 
 import (
-	"io/ioutil"
-	"os"
-	"path"
+	"net/http"
+
+	_ "src/docs"
 
 	"github.com/gin-gonic/gin"
-	"googo.co/goo"
-	"googo.co/utils"
+	"github.com/swaggo/gin-swagger"
+	"github.com/swaggo/gin-swagger/swaggerFiles"
 )
 
-const (
-	UPLOAD_DIR = "static/"
-)
+// @title rtp cloud
+// @description rtp 的云端系统
+// @host localhost:8080
 
-type Upload struct {
+func main() {
+	r := gin.Default()
+
+	r.GET("/index", index)
+	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
+	r.Run()
 }
 
-func (this Upload) DoHandle(c *gin.Context) *goo.Result {
-	fh, err := c.FormFile("file")
-	if err != nil {
-		return goo.Err(700, "上传失败："+err.Error(), err.Error())
-	}
-	f, err := fh.Open()
-	if err != nil {
-		return goo.Err(701, "上传失败："+err.Error(), err.Error())
-	}
-	defer f.Close()
-	bytes, err := ioutil.ReadAll(f)
-	if err != nil {
-		return goo.Err(702, "上传失败："+err.Error(), err.Error())
-	}
-	md5File := utils.MD5(bytes)
-	fpath := md5File[0:2] + "/" + md5File[2:4] + "/"
-	if err := os.MkdirAll(UPLOAD_DIR+fpath, 0755); err != nil {
-		return goo.Err(703, "上传失败："+err.Error(), err.Error())
-	}
-	fname := fpath + md5File[8:24] + path.Ext(fh.Filename)
-	fw, err := os.Create(UPLOAD_DIR + fname)
-	if err != nil {
-		return goo.Err(704, "上传失败："+err.Error(), err.Error())
-	}
-	defer fw.Close()
-	if _, err := fw.Write(bytes); err != nil {
-		return goo.Err(705, "上传失败："+err.Error(), err.Error())
-	}
-	return goo.Succ(gin.H{
-		"url": "/file/" + fname,
-	})
+//@Tags index
+// @Summary index
+// @Description none
+// @Produce  json
+// @Success 200 {string} string "hsdf"
+// @Failure 500 {string} string "no"
+// @Router /index [get]
+func index(c *gin.Context) {
+	c.HTML(http.StatusOK, "hahhah", nil)
+
 }

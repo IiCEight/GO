@@ -1,36 +1,34 @@
 package main
 
 import (
-	_ "Fifth_Week/docs"
 	"net/http"
 
+	_ "Fifth_Week/src/docs"
+
 	"github.com/gin-gonic/gin"
-	gs "github.com/swaggo/gin-swagger"
+	"github.com/swaggo/gin-swagger"
 	"github.com/swaggo/gin-swagger/swaggerFiles"
 )
 
-// @title Saber
-// @version 1.0
-// @description welcome!
-// @termsOfService http://arturia.top
+// @title rtp cloud
+// @description rtp 的云端系统
+// @host localhost:8080
 
-// @contact.name iSaber
-// @contact.url http://arturia.top
-// @contact.email 1346959878@qq.com
-
-// @host localhost
-// @BasePath D:\Project\Visual Studio Code\Go
 func main() {
 	r := gin.Default()
-	r.GET("/index", gs.WrapHandler(swaggerFiles.Handler))
-	// r.GET("/index", index)
+
+	r.GET("/index", index)
+	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	r.Run()
 }
 
-// index 升级版帖子列表接口
-// @Summary 升级版帖子列表接口
-
+//@Tags index
+// @Summary index
+// @Description none
+// @Produce  json
+// @Success 200 {string} string "hsdf"
+// @Failure 500 {string} string "no"
+// @Router /index [get]
 func index(c *gin.Context) {
-	c.HTML(http.StatusOK, "<h1> Hello, world!</h1>", nil)
-
+	c.HTML(http.StatusOK, "hahhah", nil)
 }
